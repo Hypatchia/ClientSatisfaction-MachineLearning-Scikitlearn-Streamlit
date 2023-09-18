@@ -66,7 +66,7 @@ if uploaded_file is not None:
             # Display the combined DataFrame with predictions
             st.subheader('Test Data with Predictions')
             st.write(data)
-
+    
             # Add a download button for the DataFrame
             download_button = st.download_button(
                 label="Download Predictions CSV",
