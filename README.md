@@ -1,9 +1,8 @@
 # ClientSatisfactionPrediction
 
 
-#### The full app is fully available on this link: 
-
-### Instruction to Try the Project:
+* The full streamlit app is fully available on this link: https://clientsatisfactionprediction.streamlit.app/
+#### Instructions to Try the Project:
 
 * Clone Repo:
 ~~~ 
