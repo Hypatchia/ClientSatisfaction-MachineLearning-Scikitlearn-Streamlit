@@ -18,12 +18,20 @@ git clone https://github.com/Hypatchia/ClientSatisfactionPrediction
 ~~~
 cd PremiumEnrollementPrediction
 ~~~
+* Create virtual environment
+~~~
+python -m venv myenv
+~~~
 
+* Activate venv
+~~~
+source <path_to_environmeent>/myenv/activate
+~~~
 * Install requirements.txt
 ~~~
 pip install -r requirements.txt
 ~~~
-* Activate virtual 
+
 * Run Streamlit Server:
 ~~~
 streamlit run app.py
