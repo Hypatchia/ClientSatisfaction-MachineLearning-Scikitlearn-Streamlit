@@ -1,1 +1,32 @@
 # ClientSatisfactionPrediction
+
+
+#### The full app is fully available on this link: 
+
+### Instruction to Try the Project:
+
+* Clone Repo:
+~~~ 
+git clone https://github.com/Hypatchia/ClientSatisfactionPrediction
+~~~
+
+* Navigate to Repo's directory
+~~~
+cd PremiumEnrollementPrediction
+~~~
+
+
+* Install requirements.txt
+~~~
+pip install -r requirements.txt
+~~~
+* Run Streamlit Server:
+~~~
+streamlit run app.py
+~~~
+
+* Navigate to saved_models
+- Copy and past All .pkl saved model to root directory (where app.py is)
+* Navigate to Processed_dataset
+- Upload the test_data.csv to app.
+
