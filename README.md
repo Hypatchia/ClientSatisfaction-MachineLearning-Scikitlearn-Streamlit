@@ -19,7 +19,6 @@
 - [Metrics and Results](#metrics-and-results)
 - [Outcomes](#outcomes)
 - [Contact](#contact)
-- [Footer](#footer)
 
 ---
 
