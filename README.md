@@ -40,8 +40,7 @@ Companies that can effectively anticipate customer needs and tailor their servic
 - Streamlit Web App
 - Jupyter Notebook, Visual Studio Code, Git, GitHub
 
-[GitHub Repository](https://github.com/Hypatchia/PremiumEnrollmentPrediction/)
-[Try the App](https://your-website.com/app-link)
+
 
 ---
 
@@ -107,6 +106,7 @@ Achieved the following metrics on the test dataset:
 - ROC AUC: 0.92
 
 These results demonstrate the effectiveness of the predictive models. Identified key features that significantly influence customer satisfaction, providing actionable insights for businesses.
+
 ---
 
 ## Outcomes
