@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 from base64 import b64encode
 from sklearn.preprocessing import StandardScaler
 
-# Title
+# Set Title
 st.title('Client Satisfaction Prediction App')
 
 # Upload CSV file
@@ -31,11 +31,11 @@ if uploaded_file is not None:
         st.write(data)
 
         # Load models
-        lr_model = joblib.load('LogisticRegressionModel.pkl')  # Load your first model
-        gb_model = joblib.load('GradientBoostingModel.pkl')  # Load your second model
-        nb_model = joblib.load('NaiveBayesModel.pkl')  # Load your third model
-        rf_model = joblib.load('RandomForestModel.pkl')  # Load your fourth model
-        svm_model = joblib.load('SupportVectorMachinesModel.pkl')  # Load your fifth model
+        lr_model = joblib.load('LogisticRegressionModel.pkl')  
+        gb_model = joblib.load('GradientBoostingModel.pkl')  
+        nb_model = joblib.load('NaiveBayesModel.pkl')  
+        rf_model = joblib.load('RandomForestModel.pkl') 
+        svm_model = joblib.load('SupportVectorMachinesModel.pkl') 
 
 
         # Create a dropdown menu to select the model
