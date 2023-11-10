@@ -2,11 +2,22 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 from base64 import b64encode
 from sklearn.preprocessing import StandardScaler
-
-# Title
-st.title('Client Satisfaction Prediction App')
+import matplotlib.pyplot as plt
+import seaborn as sns
+# Set Title
+st.title('Customer Satisfaction Prediction')
+# Display the test dataset to viwer
+st.subheader('Instructions:')
+st.write("1. Upload a CSV file to make predictions.")
+st.write("2. Get Instant Summary Statistics, Histograms, Correlation Matrix and Correlation Heatmap.")
+st.write("3. Select a model of your choice.")
+st.write("4. Chosoe Logistic Regression, Gradient Boosting, Naive Bayes, Random Forest, Support Vector Machines")
+st.write("5. Click the 'Predict' button.")
+st.write("6. View the test data with predictions.")
+st.write("7. Download the predictions CSV file.")
 
 # Upload CSV file
 uploaded_file = st.file_uploader("Upload a CSV file to make predictions", type=["csv"])
@@ -29,12 +40,54 @@ if uploaded_file is not None:
         st.subheader('Your Dataset')
         st.write(data)
 
+        # Data Exploration Section
+        st.header('Data Exploration')
+
+        # Display basic statistics
+        st.subheader('Summary Statistics')
+        st.write(data.describe())
+
+        # Display a subplot for each column
+        st.subheader('Histograms')
+
+        num_cols = len(data.columns)
+        num_rows = (num_cols // 3) + 1  # Adjust the number of rows based on your preference
+
+        fig, axs = plt.subplots(nrows=num_rows, ncols=3, figsize=(15, 3 * num_rows))
+
+        for i, column in enumerate(data.columns):
+            row_idx = i // 3
+            col_idx = i % 3
+            axs[row_idx, col_idx].hist(data[column], bins='auto', edgecolor='k')
+            axs[row_idx, col_idx].set_title(column)
+
+        # Remove empty subplots
+        for i in range(len(data.columns), num_rows * 3):
+            row_idx = i // 3
+            col_idx = i % 3
+            fig.delaxes(axs[row_idx, col_idx])
+
+        st.pyplot(fig)
+
+          
+
+        # Display a correlation matrix
+        st.subheader('Correlation Matrix')
+        corr_matrix = data.corr()
+        st.write(corr_matrix)
+
+         # Visualize the correlation matrix using a heatmap
+        st.write('### Correlation Heatmap')
+        fig, ax = plt.subplots()
+        ax.matshow(data.corr(), cmap='viridis')
+        st.pyplot(fig)
+
         # Load models
-        lr_model = joblib.load('pkl_models/LogisticRegressionModel.pkl')  # Load your first model
-        gb_model = joblib.load('pkl_models/GradientBoostingModel.pkl')  # Load your second model
-        nb_model = joblib.load('pkl_models/NaiveBayesModel.pkl')  # Load your third model
-        rf_model = joblib.load('pkl_models/RandomForestModel.pkl')  # Load your fourth model
-        svm_model = joblib.load('pkl_models/SupportVectorMachinesModel.pkl')  # Load your fifth model
+        lr_model = joblib.load('LogisticRegressionModel.pkl')  
+        gb_model = joblib.load('GradientBoostingModel.pkl')  
+        nb_model = joblib.load('NaiveBayesModel.pkl')  
+        rf_model = joblib.load('RandomForestModel.pkl') 
+        svm_model = joblib.load('SupportVectorMachinesModel.pkl') 
 
 
         # Create a dropdown menu to select the model
@@ -45,7 +98,7 @@ if uploaded_file is not None:
         # Make predictionss
         if predict_button:
             if model_choice == "Logistic Regression":
-                predictions = lr_model.predict(processed_data)
+                predictions = lr_model.predict(processed_data)  
 
             elif model_choice == "Gradient Boosting":
                 predictions = gb_model.predict(processed_data)
@@ -66,7 +119,7 @@ if uploaded_file is not None:
             # Display the combined DataFrame with predictions
             st.subheader('Test Data with Predictions')
             st.write(data)
-    
+
             # Add a download button for the DataFrame
             download_button = st.download_button(
                 label="Download Predictions CSV",
