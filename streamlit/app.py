@@ -50,26 +50,9 @@ if uploaded_file is not None:
         # Display a subplot for each column
         st.subheader('Histograms')
 
-        num_cols = len(data.columns)
-        num_rows = (num_cols // 3) + 1  # Adjust the number of rows based on your preference
-
-        fig, axs = plt.subplots(nrows=num_rows, ncols=3, figsize=(15, 3 * num_rows))
-
-        for i, column in enumerate(data.columns):
-            row_idx = i // 3
-            col_idx = i % 3
-            axs[row_idx, col_idx].hist(data[column], bins='auto', edgecolor='k')
-            axs[row_idx, col_idx].set_title(column)
-
-        # Remove empty subplots
-        for i in range(len(data.columns), num_rows * 3):
-            row_idx = i // 3
-            col_idx = i % 3
-            fig.delaxes(axs[row_idx, col_idx])
-
-        st.pyplot(fig)
-
-          
+        # Display histograms for each pair of features
+        sns.pairplot(data)
+        st.pyplot()
 
         # Display a correlation matrix
         st.subheader('Correlation Matrix')
