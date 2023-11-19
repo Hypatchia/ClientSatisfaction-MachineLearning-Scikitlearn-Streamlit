@@ -66,11 +66,11 @@ if uploaded_file is not None:
         st.pyplot(fig)
 
         # Load models
-        lr_model = joblib.load('pkl_models/LogisticRegressionModel.pkl')  
-        gb_model = joblib.load('pkl_models/GradientBoostingModel.pkl')  
-        nb_model = joblib.load('pkl_models/NaiveBayesModel.pkl')  
-        rf_model = joblib.load('pkl_models/RandomForestModel.pkl') 
-        svm_model = joblib.load('pkl_models/SupportVectorMachinesModel.pkl') 
+        lr_model = joblib.load('/pkl_models/LogisticRegressionModel.pkl')  
+        gb_model = joblib.load('/pkl_models/GradientBoostingModel.pkl')  
+        nb_model = joblib.load('/pkl_models/NaiveBayesModel.pkl')  
+        rf_model = joblib.load('/pkl_models/RandomForestModel.pkl') 
+        svm_model = joblib.load('/pkl_models/SupportVectorMachinesModel.pkl') 
 
 
         # Create a dropdown menu to select the model
