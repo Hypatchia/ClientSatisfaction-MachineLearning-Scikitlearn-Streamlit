@@ -27,11 +27,11 @@ This is a Data Science project by Samia BELHADDAD, focused on predicting custome
 
 ## Project Overview
 
-Companies that can effectively anticipate customer needs and tailor their services accordingly are more likely to thrive. This project focuses on leveraging data science techniques to predict customer satisfaction accurately. Five distinct machine learning models were built to achieve this goal, aiming to provide businesses with actionable insights into improving customer experiences.
+Companies that can effectively anticipate customer needs and tailor their services accordingly are more likely to thrive. This project focuses on leveraging data science techniques to predict customer satisfaction accurately. 4 distinct machine learning models were built to achieve this goal, aiming to provide businesses with actionable insights into improving customer experiences.
 
 ### Tools and Technology
 - Python, Scikit Learn, Pandas, Numpy, Matplotlib, Seaborn
-- Logistic Regression, Random Forest, Gradient Boosting, SVM, Naive Bayes
+- Logistic Regression, Gradient Boosting, SVM, Naive Bayes
 - Streamlit Web App
 - Jupyter Notebook, Visual Studio Code, Git, GitHub
 
@@ -52,7 +52,8 @@ The scope of this project encompassed the following key aspects:
 - Data Collection: Gathering and preprocessing customer-related data, including purchase history, customer demographics, and feedback.
 - Exploratory Data Analysis (EDA): Investigating data patterns and identifying key features that influence customer satisfaction.
 - Feature Engineering: Creating relevant features to enhance model performance.
-- Model Selection: Choosing five machine learning models suitable for customer satisfaction prediction.
+- Model Selection: Choosing Four 
+machine learning models suitable for customer satisfaction prediction.
 - Model Training: Optimizing and fine-tuning each selected model.
 - Model Evaluation: Assessing model performance using metrics such as accuracy, F1-score, and ROC-AUC.
 - Deliverable Creation: Generating a detailed report, codebase, and interactive demo for showcasing the project's outcomes.
@@ -85,7 +86,7 @@ Data has 22 features and a target feature. The dataset represents user demograph
 
 ## Metrics and Results
 
-Developed and fine-tuned five machine learning models for customer satisfaction prediction. Achieved the following accuracies on the test dataset, demonstrating the effectiveness of the predictive models. Identified key features that significantly influence customer satisfaction, providing actionable insights for businesses.
+Developed and fine-tuned four machine learning models for customer satisfaction prediction. Achieved the following accuracies on the test dataset, demonstrating the effectiveness of the predictive models. Identified key features that significantly influence customer satisfaction, providing actionable insights for businesses.
 
 The metrics used for evaluation are:
 - Accuracy
