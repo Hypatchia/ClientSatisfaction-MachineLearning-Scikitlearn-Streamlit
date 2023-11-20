@@ -4,7 +4,6 @@
 * The full streamlit app is fully available on this link: https://clientsatisfactionprediction.streamlit.app/
 
 
-![Samia BELHADDAD](https://your-website.com/path-to-your-image.png)
 
 ---
 
@@ -25,8 +24,6 @@
 ## Introduction
 
 This is a Data Science project by Samia BELHADDAD, focused on predicting customer satisfaction. Effective anticipation of customer needs can significantly impact a business's success. This project utilizes data science techniques to predict customer satisfaction accurately, aiming to provide actionable insights for businesses.
-
-![Project Image](https://your-website.com/path-to-your-image.jpg)
 
 ---
 
@@ -84,27 +81,67 @@ You can try the app using the Streamlit view from [here](https://premiumenrollme
 
 This is a sample of the used dataset. [Dataset](https://your-website.com/dataset-link)
 
-Data has 143 features and a target feature. The dataset represents user demographics, user interaction with the app features, user engagement within the premium features, and user subscription to the premium service.
+Data has 22 features and a target feature. The dataset represents user demographics, user interaction with the app features, user engagement within the premium features, and user subscription to the premium service.
 
 ---
 
 ## Metrics and Results
 
-Developed and fine-tuned five machine learning models for customer satisfaction prediction. Achieved an accuracy of 87% on the test dataset, demonstrating the effectiveness of the predictive models. Identified key features that significantly influence customer satisfaction, providing actionable insights for businesses.
+Developed and fine-tuned five machine learning models for customer satisfaction prediction. Achieved the following accuracies on the test dataset, demonstrating the effectiveness of the predictive models. Identified key features that significantly influence customer satisfaction, providing actionable insights for businesses.
 
 The metrics used for evaluation are:
-- Confusion Matrix
+- Accuracy
 - Precision and Recall
 - ROC AUC Curves
+- F1 Score
 
 Achieved the following metrics on the test dataset:
 
-- Accuracy: 87%
-- Precision: 0.88
-- Recall: 0.86
-- F1-score: 0.87
-- ROC AUC: 0.92
 
+<table>
+    <tr>
+      <th>Model</th>
+      <th>Accuracy</th>
+      <th>Precision and Recall</th>
+      <th>ROC AUC Curves</th>
+      <th>F1 Score</th>
+    </tr>
+    <tr>
+      <td>Model 1</td>
+      <td>0.85</td>
+      <td>Precision: 0.82<br>Recall: 0.88</td>
+      <td>ROC AUC Curve Image</td>
+      <td>0.85</td>
+    </tr>
+    <tr>
+      <td>Model 2</td>
+      <td>0.88</td>
+      <td>Precision: 0.85<br>Recall: 0.90</td>
+      <td>ROC AUC Curve Image</td>
+      <td>0.87</td>
+    </tr>
+    <tr>
+      <td>Model 3</td>
+      <td>0.82</td>
+      <td>Precision: 0.78<br>Recall: 0.85</td>
+      <td>ROC AUC Curve Image</td>
+      <td>0.80</td>
+    </tr>
+    <tr>
+      <td>Model 4</td>
+      <td>0.90</td>
+      <td>Precision: 0.88<br>Recall: 0.92</td>
+      <td>ROC AUC Curve Image</td>
+      <td>0.89</td>
+    </tr>
+    <tr>
+      <td>Model 5</td>
+      <td>0.87</td>
+      <td>Precision: 0.84<br>Recall: 0.89</td>
+      <td>ROC AUC Curve Image</td>
+      <td>0.86</td>
+    </tr>
+  </table>
 These results demonstrate the effectiveness of the predictive models. Identified key features that significantly influence customer satisfaction, providing actionable insights for businesses.
 
 ---
