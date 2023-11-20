@@ -104,7 +104,7 @@ Achieved the following metrics on the test dataset:
 
 <h3 align="center">AUC ROC Curves</h3>
 <p align="center">
-  <img src="imgs/AUC_ROC.png" alt="Dataset Train & Validation" style="width:70%; height:auto;">
+  <img src="imgs/auc_roc.png" alt="Dataset Train & Validation" style="width:70%; height:auto;">
 </p>
 
 
