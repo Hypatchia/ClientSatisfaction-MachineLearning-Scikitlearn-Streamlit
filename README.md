@@ -3,8 +3,6 @@
 
 * The full streamlit app is fully available on this link: https://clientsatisfactionprediction.streamlit.app/
 
-
-
 ---
 
 ## Table of Contents
@@ -97,51 +95,18 @@ The metrics used for evaluation are:
 
 Achieved the following metrics on the test dataset:
 
+<h3 align="center">Classification Report</h3>
+<p align="center">
+  <img src="imgs/cr.png" alt="Dataset Train & Validation" style="width:70%; height:auto;">
+</p>
 
-<table>
-    <tr>
-      <th>Model</th>
-      <th>Accuracy</th>
-      <th>Precision and Recall</th>
-      <th>ROC AUC Curves</th>
-      <th>F1 Score</th>
-    </tr>
-    <tr>
-      <td>Model 1</td>
-      <td>0.85</td>
-      <td>Precision: 0.82<br>Recall: 0.88</td>
-      <td>ROC AUC Curve Image</td>
-      <td>0.85</td>
-    </tr>
-    <tr>
-      <td>Model 2</td>
-      <td>0.88</td>
-      <td>Precision: 0.85<br>Recall: 0.90</td>
-      <td>ROC AUC Curve Image</td>
-      <td>0.87</td>
-    </tr>
-    <tr>
-      <td>Model 3</td>
-      <td>0.82</td>
-      <td>Precision: 0.78<br>Recall: 0.85</td>
-      <td>ROC AUC Curve Image</td>
-      <td>0.80</td>
-    </tr>
-    <tr>
-      <td>Model 4</td>
-      <td>0.90</td>
-      <td>Precision: 0.88<br>Recall: 0.92</td>
-      <td>ROC AUC Curve Image</td>
-      <td>0.89</td>
-    </tr>
-    <tr>
-      <td>Model 5</td>
-      <td>0.87</td>
-      <td>Precision: 0.84<br>Recall: 0.89</td>
-      <td>ROC AUC Curve Image</td>
-      <td>0.86</td>
-    </tr>
-  </table>
+
+<h3 align="center">AUC ROC Curves</h3>
+<p align="center">
+  <img src="imgs/AUC_ROC.png" alt="Dataset Train & Validation" style="width:70%; height:auto;">
+</p>
+
+
 These results demonstrate the effectiveness of the predictive models. Identified key features that significantly influence customer satisfaction, providing actionable insights for businesses.
 
 ---
