@@ -18,9 +18,8 @@ def load_models():
     lr_model = joblib.load('streamlit/pkl_models/LogisticRegressionModel.pkl')  
     gb_model = joblib.load('streamlit/pkl_models/GradientBoostingModel.pkl')  
     nb_model = joblib.load('streamlit/pkl_models/NaiveBayesModel.pkl')  
-    rf_model = joblib.load('streamlit/pkl_models/RandomForestModel.pkl') 
     svm_model = joblib.load('streamlit/pkl_models/SupportVectorMachinesModel.pkl') 
-    return lr_model, gb_model, nb_model, rf_model, svm_model
+    return lr_model, gb_model, nb_model, svm_model
 
 
 @st.cache_data
@@ -59,7 +58,7 @@ def get_eda(data):
 @st.cache_data
 def get_predictions(data,model_choice):
 # Create a DataFrame with the data uploaded by the user
-    lr_model, gb_model, nb_model, rf_model, svm_model = load_models()
+    lr_model, gb_model, nb_model, svm_model = load_models()
 
     if model_choice == "Logistic Regression":
         predictions = lr_model.predict(data)  
@@ -70,9 +69,6 @@ def get_predictions(data,model_choice):
     elif model_choice == "Naive Bayes":
         predictions = nb_model.predict(data)
 
-    elif model_choice == "Random Forests":
-        predictions = rf_model.predict(data)
-    
     elif model_choice == "Support Vector Machines":
         predictions = svm_model.predict(data)
 
@@ -100,7 +96,7 @@ def main():
     st.write("1. Upload a CSV file to make predictions.")
     st.write("2. Get Instant Summary Statistics, Histograms, Correlation Matrix and Correlation Heatmap.")
     st.write("3. Then, Select a model of your choice.")
-    st.write("4. Choose between Logistic Regression, Gradient Boosting, Naive Bayes, Random Forest, Support Vector Machines")
+    st.write("4. Choose between Logistic Regression, Gradient Boosting, Naive Bayes, Support Vector Machines")
     st.write("5. Click the 'Predict' button.")
     st.write("6. View the test data with predictions.")
     st.write("7. Download the predictions CSV file.")
@@ -138,7 +134,7 @@ def main():
                 # Make predictions when the button is pressed
             
             model_choice = st.radio("Which Model would you like to use?",
-                    options=['Logistic Regression', 'Random Forests', 'Gradient Boosting', 'Naive Bayes', 'Support Vector Machines'])
+                    options=['Logistic Regression', 'Gradient Boosting', 'Naive Bayes', 'Support Vector Machines'])
             if st.button("Predict"):
                 st.write('Predictions are ready!')
                 predictions = get_predictions(data, model_choice)
