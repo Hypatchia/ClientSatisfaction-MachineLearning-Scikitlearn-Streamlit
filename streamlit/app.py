@@ -62,25 +62,51 @@ def get_predictions(data,model_choice):
 
     if model_choice == "Logistic Regression":
         predictions = lr_model.predict(data)  
+         # Combine the predictions into a single DataFrame
+        data['Predictions'] = predictions
+        
+        # Display the combined DataFrame with predictions
+        st.subheader('Test Data with Predictions')
+        st.write(data)
+        return data
+
+
         
     elif model_choice == "Gradient Boosting":
         predictions = gb_model.predict(data)
+         # Combine the predictions into a single DataFrame
+        data['Predictions'] = predictions
+            # Display the combined DataFrame with predictions
+        st.subheader('Test Data with Predictions')
+        st.write(data)
+        return data
+
 
     elif model_choice == "Naive Bayes":
         predictions = nb_model.predict(data)
+         # Combine the predictions into a single DataFrame
+        data['Predictions'] = predictions
+            # Display the combined DataFrame with predictions
+        st.subheader('Test Data with Predictions')
+        st.write(data)
+        return data
+
 
     elif model_choice == "Support Vector Machines":
         predictions = svm_model.predict(data)
+         # Combine the predictions into a single DataFrame
+        data['Predictions'] = predictions
+            # Display the combined DataFrame with predictions
+        st.subheader('Test Data with Predictions')
+        st.write(data)
+        return data
 
-    # Combine the predictions into a single DataFrame
-    data['Predictions'] = predictions
 
-    # Display the combined DataFrame with predictions
-    st.subheader('Test Data with Predictions')
-    st.write(data)
+   
+
 
     # Add a download button for the DataFrame
-    return data
+    
 
 
 @st.cache_resource
@@ -139,11 +165,11 @@ def main():
                 st.write('Predictions are ready!')
                 predictions = get_predictions(data, model_choice)
                 st.download_button(
-            label="Download Predictions CSV",
-            data=predictions.to_csv(index=False).encode('utf-8'),
-            key="download_button",
-            file_name="predictions.csv",
-            mime="text/csv",
+                label="Download Predictions CSV",
+                data=predictions.to_csv(index=False).encode('utf-8'),
+                key="download_button",
+                file_name="predictions.csv",
+                mime="text/csv",
             )
                 
   
